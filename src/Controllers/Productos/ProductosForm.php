@@ -109,19 +109,19 @@ class ProductosForm extends PublicController
                     $this->addError("Error al Actualizar el Producto");
                 }
                 break;
-                // case "DEL":
-                //     $result = DaoProducto::delete(
-                //         $this->productid
-                //     );
-                //     if ($result > 0) {
-                //         Site::redirectToWithMsg(
-                //             "index.php?page=Productos_ProductosList",
-                //             "Producto Eliminado"
-                //         );
-                //     } else {
-                //         $this->addError("Error al Eliminar el Producto");
-                //     }
-                //     break;
+            case "DEL":
+                $result = DaoProducto::delete(
+                    $this->productid
+                );
+                if ($result > 0) {
+                    Site::redirectToWithMsg(
+                        "index.php?page=Productos_ProductosList",
+                        "Producto Eliminado"
+                    );
+                } else {
+                    $this->addError("Error al Eliminar el Producto");
+                }
+                break;
             default:
                 $this->addError("Modo Invalido");
                 break;

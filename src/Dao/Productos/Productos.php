@@ -20,6 +20,12 @@ class Productos extends Table
             ["id" => $id]
         );
     }
+    // delete
+    public static function delete($id)
+    {
+        $deleteSql = "DELETE FROM Productos WHERE productid = :productid";
+        return self::executeNonQuery($deleteSql, ["productid" => $id]);
+    }
     // add
     public static function add(
         $productname,

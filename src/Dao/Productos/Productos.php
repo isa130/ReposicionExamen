@@ -35,4 +35,21 @@ class Productos extends Table
             "stockquantity" => $stockquantity
         ]);
     }
+    // update
+    public static function update(
+        $productname,
+        $categoryid,
+        $price,
+        $stockquantity,
+        $productid
+    ) {
+        $updateSql = "UPDATE Productos SET productname = :productname, categoryid = :categoryid, price = :price, stockquantity = :stockquantity WHERE productid = :productid";
+        return self::executeNonQuery($updateSql, [
+            "productname" => $productname,
+            "categoryid" => $categoryid,
+            "price" => $price,
+            "stockquantity" => $stockquantity,
+            "productid" => $productid
+        ]);
+    }
 }

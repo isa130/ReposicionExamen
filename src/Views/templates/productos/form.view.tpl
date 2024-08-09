@@ -22,11 +22,11 @@
         </div>
         <div>
             <label for="price">Precio</label>
-            <input type="text" name="price" id="price" value="{{price}}" {{isReadOnly}}>
+            <input type="number" name="price" id="price" value="{{price}}" {{isReadOnly}}>
         </div>
         <div>
             <label for="stockquantity">Stock</label>
-            <input type="text" name="stockquantity" id="stockquantity" value="{{stockquantity}}" {{isReadOnly}}>
+            <input type="number" name="stockquantity" id="stockquantity" value="{{stockquantity}}" {{isReadOnly}}>
         </div>
         <div>
             {{if showActions}}

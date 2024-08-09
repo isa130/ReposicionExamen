@@ -20,4 +20,19 @@ class Productos extends Table
             ["id" => $id]
         );
     }
+    // add
+    public static function add(
+        $productname,
+        $categoryid,
+        $price,
+        $stockquantity
+    ) {
+        $insertSql = "INSERT INTO Productos (productname, categoryid, price, stockquantity) VALUES (:productname, :categoryid, :price, :stockquantity)";
+        return self::executeNonQuery($insertSql, [
+            "productname" => $productname,
+            "categoryid" => $categoryid,
+            "price" => $price,
+            "stockquantity" => $stockquantity
+        ]);
+    }
 }

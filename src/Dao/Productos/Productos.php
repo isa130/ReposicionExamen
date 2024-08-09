@@ -16,7 +16,7 @@ class Productos extends Table
     public static function getById($id)
     {
         return self::obtenerUnRegistro(
-            "SELECT * FROM productos WHERE productid = :id",
+            "SELECT * FROM Productos WHERE productid = :id",
             ["id" => $id]
         );
     }
